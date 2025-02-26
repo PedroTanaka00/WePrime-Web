@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie Seu Site Personalizado - WePrimeWeb</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crie Seu Site Personalizado</h1>
+        <form id="custom-site-form">
+            <div class="form-step" data-step="1">
+                <h2>Informações Básicas</h2>
+                <div class="form-group">
+                    <label for="company-name">Nome da Empresa</label>
+                    <input type="text" id="company-name" name="company-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="website-type">Tipo de Website</label>
+                    <select id="website-type" name="website-type" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="corporate">Corporativo</option>
+                        <option value="e-commerce">E-commerce</option>
+                        <option value="portfolio">Portfólio</option>
+                        <option value="blog">Blog</option>
+                        <option value="other">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="company-logo">Logo da Empresa</label>
+                    <input type="file" id="company-logo" name="company-logo" accept="image/*">
+                    <div id="logo-preview" class="logo-preview"></div>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="2">
+                <h2>Design e Cores</h2>
+                <div class="form-group">
+                    <label for="color-scheme">Esquema de Cores Preferido</label>
+                    <input type="text" id="color-scheme" name="color-scheme" placeholder="Ex: Azul e branco">
+                </div>
+                <div class="form-group">
+                    <label for="design-style">Estilo de Design</label>
+                    <select id="design-style" name="design-style" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="modern">Moderno</option>
+                        <option value="minimalist">Minimalista</option>
+                        <option value="classic">Clássico</option>
+                        <option value="creative">Criativo</option>
+                        <option value="other">Outro</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="3">
+                <h2>Estrutura do Site</h2>
+                <div class="form-group">
+                    <label>Seções Desejadas (selecione todas que se aplicam)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="sections" value="home"> Página Inicial</label>
+                        <label><input type="checkbox" name="sections" value="about"> Sobre Nós</label>
+                        <label><input type="checkbox" name="sections" value="services"> Serviços</label>
+                        <label><input type="checkbox" name="sections" value="portfolio"> Portfólio</label>
+                        <label><input type="checkbox" name="sections" value="testimonials"> Depoimentos</label>
+                        <label><input type="checkbox" name="sections" value="contact"> Contato</label>
+                        <label><input type="checkbox" name="sections" value="blog"> Blog</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="4">
+                <h2>Arquivos e Referências</h2>
+                <div class="form-group">
+                    <label for="reference-sites">Sites de Referência (URLs)</label>
+                    <textarea id="reference-sites" name="reference-sites" rows="3" placeholder="https://exemplo1.com, https://exemplo2.com"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="additional-files">Arquivos Adicionais (opcional)</label>
+                    <input type="file" id="additional-files" name="additional-files" multiple>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="5">
+                <h2>Informações Adicionais</h2>
+                <div class="form-group">
+                    <label for="additional-info">Alguma informação adicional que gostaria de compartilhar?</label>
+                    <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="form-navigation">
+                <button type="button" id="prev-btn" class="nav-btn">Anterior</button>
+                <button type="button" id="next-btn" class="nav-btn">Próximo</button>
+                <button type="submit" id="submit-btn" class="nav-btn">Enviar</button>
+            </div>
+        </form>
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
+        <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Fale Conosco no WhatsApp
+        </a>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
