@@ -54,7 +54,9 @@ body {
     padding: 0 20px;
 }
 
-/* Navbar */
+/**************************************************************************************/
+/*************************************** HEADER ***************************************/
+/**************************************************************************************/
 #header {
     position: fixed;
     top: 0;
@@ -337,6 +339,9 @@ body {
 
 
 
+/**************************************************************************************/
+/*************************************** BANNER ***************************************/
+/**************************************************************************************/
 
   
   #infinite-banner {
@@ -442,7 +447,9 @@ body.light-theme #header .overlay {
         height: 20px;
     }
 }
-/* Hero Section */
+/**************************************************************************************/
+/*************************************** BANNER ***************************************/
+/**************************************************************************************/
 #home {
     height: 100vh;
     position: relative;
@@ -798,51 +805,12 @@ section {
     color: var(--primary-color);
 }
 
-/* Sobre Section */
-/*#sobre .about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-#sobre .about-text {
-    flex: 1;
-    padding-right: 50px;
-}
 
-#sobre .about-stats {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
 
-#sobre .stat-item {
-    text-align: center;
-    padding: 20px;
-    background: rgb(6 6 6);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
-
-    border-radius: 10px;
-    transition: var(--transition);
-}
-
-#sobre .stat-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 247, 255, 0.1);
-}
-
-#sobre .stat-item i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-#sobre .stat-item h3 {
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-*/
+/**************************************************************************************/
+/*************************************** SOBRE NÓS ***************************************/
+/**************************************************************************************/
 #about-section {
     background: linear-gradient(to bottom, #ffffff00, #00e1ff09, #ffffff00);
     min-height: 100vh;
@@ -1091,7 +1059,12 @@ section {
     }
 }
 
-/* Serviços Section */
+
+
+
+/**************************************************************************************/
+/*************************************** SERVIÇOS ***************************************/
+/**************************************************************************************/
 #servicos .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1129,6 +1102,10 @@ section {
 
 
 
+
+/**************************************************************************************/
+/*************************************** SITES ÚNICOS ***************************************/
+/**************************************************************************************/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 #sites-exclusivos {
@@ -1333,7 +1310,9 @@ section {
 
 
 
-
+/**************************************************************************************/
+/*************************************** SITES ÚNICOS COM MODELOS ***************************************/
+/**************************************************************************************/
 #website-models {
     min-height: 100vh;
     background: linear-gradient(to bottom, #2c3e5000, #00e1ff34, #ffffff00);
@@ -1558,7 +1537,9 @@ section {
 
 
 
-
+/**************************************************************************************/
+/*************************************** SITES INDIVIDUAIS ***************************************/
+/**************************************************************************************/
 #hero-arcane {
     background: linear-gradient(to bottom, #00ffff00, #00ffff0c, #ffffff00);
     min-height: 100vh;
@@ -1929,469 +1910,13 @@ section {
     }
 }
 
-/*
-#exclusive-sites {
-    position: relative;
-    padding-bottom: 80px; 
-}
-
-#exclusive-sites .whatsapp-button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px; /
-}
-
-#exclusive-sites .whatsapp-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25D366;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-}
-
-#exclusive-sites .whatsapp-button:hover {
-    background-color: #128C7E;
-    box-shadow: 0 6px 15px rgba(18, 140, 126, 0.4);
-    transform: translateY(-3px);
-}
-
-#exclusive-sites .whatsapp-button .whatsapp-icon {
-    width: 24px;
-    height: 24px;
-    fill: currentColor;
-    margin-right: 10px;
-}
-
-#exclusive-sites .whatsapp-button span {
-    white-space: nowrap;
-}
-
-@media (max-width: 768px) {
-    #exclusive-sites .whatsapp-button {
-        padding: 12px 24px;
-        font-size: 16px;
-    }
-    
-    #exclusive-sites .whatsapp-button .whatsapp-icon {
-        width: 20px;
-        height: 20px;
-    }
-}
-#exclusive-sites {
-    padding: 4rem 2rem;
-    background-color: #f0f4f800;
-    font-family: 'Poppins', sans-serif;
-}
 
 
-#exclusive-sites .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 3rem;
-    position: relative;
-}
-
-#exclusive-sites .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background: linear-gradient(90deg, #3498db, #9b59b6);
-}
-
-#exclusive-sites .sites-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#exclusive-sites .site-preview {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-#exclusive-sites .site-preview:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-#exclusive-sites .site-preview img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-#exclusive-sites .site-preview:hover img {
-    transform: scale(1.1);
-}
-
-#exclusive-sites .site-preview span {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 1rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-#exclusive-sites .site-preview:hover span {
-    transform: translateY(0);
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    #exclusive-sites .section-title {
-        font-size: 2rem;
-    }
-
-    #exclusive-sites .sites-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-}
-
-@media (max-width: 480px) {
-    #exclusive-sites .section-title {
-        font-size: 1.8rem;
-    }
-
-    #exclusive-sites .sites-grid {
-        grid-template-columns: 1fr;
-    }
-}
-*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
-#sites-personalizados {
-    position: relative;
-    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.596);
-    margin-top: 2rem;
-    padding: 120px 0;
-    background-color: #060606cf;
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 80px;
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif;
-    color: #ffffff;
-}
-
-#sites-personalizados .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 2;
-}
-
-#sites-personalizados .section-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: center;
-    background: linear-gradient(45deg, #00f7ff, #8e109e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: titleGlow 2s ease-in-out infinite alternate;
-}
-
-#sites-personalizados .section-description {
-    font-size: 1.4rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #f0f0f0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#sites-personalizados .section-explanation {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 60px;
-    text-align: center;
-    color: #cccccc;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#sites-personalizados .features {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 60px;
-}
-
-#sites-personalizados .feature-item {
-    flex-basis: calc(25% - 40px);
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    padding: 40px 30px;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-#sites-personalizados .feature-item::before {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, #00f7ff, #8e109e, #00f7ff);
-    opacity: 0;
-    transition: all 0.6s ease;
-    z-index: -1;
-}
-
-#sites-personalizados .feature-item:hover::before {
-    opacity: 0.1;
-    top: -50%;
-    left: -50%;
-    transform: rotate(45deg);
-}
-
-#sites-personalizados .feature-item:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 247, 255, 0.2);
-}
-
-#sites-personalizados .feature-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #00f7ff;
-    transition: all 0.4s ease;
-}
-
-#sites-personalizados .feature-item:hover .feature-icon {
-    transform: scale(1.2) rotate(10deg);
-}
-
-#sites-personalizados .feature-item h3 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    color: #00f7ff;
-}
-
-#sites-personalizados .feature-item p {
-    font-size: 1rem;
-    color: #f0f0f0;
-    opacity: 0.8;
-}
-
-#sites-personalizados .cta-button {
-    display: inline-block;
-    padding: 18px 40px;
-    background: linear-gradient(45deg, #00f7ff, #8e109e);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: all 0.4s ease;
-    box-shadow: 0 10px 20px rgba(0, 247, 255, 0.4);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-#sites-personalizados .cta-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #8e109e, #00f7ff);
-    transition: all 0.4s ease;
-    z-index: -1;
-}
-
-#sites-personalizados .cta-button:hover::before {
-    left: 0;
-}
-
-#sites-personalizados .cta-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 247, 255, 0.6);
-}
 
 
-#sites-personalizados .animated-shape {
-    position: absolute;
-    background: rgba(142, 16, 158, 0.1);
-    border-radius: 50%;
-    z-index: 1;
-}
-
-#sites-personalizados .shape-1 {
-    width: 400px;
-    height: 400px;
-    top: -200px;
-    left: -200px;
-    animation: floatShape 15s ease-in-out infinite;
-}
-
-#sites-personalizados .shape-2 {
-    width: 300px;
-    height: 300px;
-    bottom: -150px;
-    right: -150px;
-    animation: floatShape 20s ease-in-out infinite reverse;
-}
-
-#sites-personalizados .shape-3 {
-    width: 200px;
-    height: 200px;
-    top: 50%;
-    left: 50%;
-    animation: floatShape 25s ease-in-out infinite;
-}
-
-@keyframes titleGlow {
-    0% {
-        text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
-    }
-    100% {
-        text-shadow: 0 0 20px rgba(142, 16, 158, 0.8);
-    }
-}
-
-@keyframes pulseBg {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-}
-
-@keyframes floatShape {
-    0%, 100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    25% {
-        transform: translate(50px, -50px) rotate(90deg);
-    }
-    50% {
-        transform: translate(0, -100px) rotate(180deg);
-    }
-    75% {
-        transform: translate(-50px, -50px) rotate(270deg);
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    #sites-personalizados .feature-item {
-        flex-basis: calc(50% - 40px);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #sites-personalizados .section-title {
-        font-size: 3rem;
-    }
-
-    #sites-personalizados .section-description {
-        font-size: 1.2rem;
-    }
-
-    #sites-personalizados .section-explanation {
-        font-size: 1rem;
-    }
-
-    #sites-personalizados .feature-item {
-        flex-basis: 100%;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    #sites-personalizados {
-        padding: 80px 0;
-    }
-
-    #sites-personalizados .section-title {
-        font-size: 2.5rem;
-    }
-
-    #sites-personalizados .section-description {
-        font-size: 1rem;
-    }
-
-    #sites-personalizados .cta-button {
-        display: block;
-        text-align: center;
-    }
-}
-/* Processo Section */
-
-#processo{
-    z-index: 3;
-}
-#processo .process-steps {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-#processo .process-step {
-    flex: 1;
-    min-width: 200px;
-    text-align: center;
-    padding: 20px;
-}
-
-#processo .step-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 20px;
-}
-
-#processo .step-icon i {
-    font-size: 2rem;
-    color: var(--background-dark);
-}
-
-/* Equipe Section */
+/**************************************************************************************/
+/*************************************** NOSSA EQUIPE ***************************************/
+/**************************************************************************************/
 #equipe .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -2514,6 +2039,10 @@ section {
 
 
 
+
+/**************************************************************************************/
+/*************************************** PROCESSO ***************************************/
+/**************************************************************************************/
 #processo2 {
     padding: 80px 0;
     background-color: #f8f9fa00;
@@ -2674,7 +2203,13 @@ section {
     }
 }
 
-/* Preços Section */
+
+
+
+
+/**************************************************************************************/
+/*************************************** PLANOS ***************************************/
+/**************************************************************************************/
 #precos .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -2726,6 +2261,12 @@ section {
     margin-right: 10px;
 }
 
+
+
+
+/**************************************************************************************/
+/*************************************** FORMULÁRIO DE CONTATO ***************************************/
+/**************************************************************************************/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 #contato {
@@ -3048,6 +2589,12 @@ section {
 
 
 
+
+
+
+/**************************************************************************************/
+/*************************************** FOOTER ***************************************/
+/**************************************************************************************/
 #modern-footer {
     background: linear-gradient(135deg, #1d1d1d, #080808);
     color: #fff;
@@ -3147,6 +2694,7 @@ section {
     align-items: center;
     justify-content: center;
     width: 40px;
+    color: #fff;
     height: 40px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
@@ -3242,14 +2790,6 @@ section {
   }
   
   
-/* Elementos decorativos */
-/*.glow-text {
-    text-shadow: 0 0 10px var(--primary-color),
-                 0 0 20px var(--primary-color),
-                 0 0 30px var(--primary-color);
-    animation: glow 2s ease-in-out infinite alternate;
-}*/
-
 @keyframes glow {
     from {
         text-shadow: 0 0 10px var(--primary-color),
