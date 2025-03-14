@@ -1,23 +1,45 @@
+<?php require_once("app/config.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WePrimeWeb Developers</title>
+    <title>WePrimeWeb Developers - Transformando Ideias em Experiências Digitais</title>
+    
+    <meta name="description" content="WePrimeWeb Developers: Transformando ideias em experiências digitais excepcionais para clínicas médicas e escritórios de advocacia.">
+    <meta name="keywords" content="desenvolvimento web, sites para clínicas médicas, sites para advogados, design responsivo, segurança web, conformidade LGPD">
+    <meta name="author" content="WePrimeWeb Developers">
+    
+    <meta property="og:title" content="WePrimeWeb Developers - Transformando Ideias em Experiências Digitais">
+    <meta property="og:description" content="WePrimeWeb Developers: Transformando ideias em experiências digitais excepcionais para clínicas médicas e escritórios de advocacia.">
+    <meta property="og:image" content="<?= BASE_URL ?>/assets/media/social-share.jpg">
+    <meta property="og:url" content="https://www.weprimeweb.com.br">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WePrimeWeb Developers - Transformando Ideias em Experiências Digitais">
+    <meta name="twitter:description" content="WePrimeWeb Developers: Transformando ideias em experiências digitais excepcionais para clínicas médicas e escritórios de advocacia.">
+    <meta name="twitter:image" content="<?= BASE_URL ?>/assets/media/social-share.jpg">
+    
+    <link rel="canonical" href="<?= BASE_URL ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
 
+    <script>
+        const baseUrl = "<?= BASE_URL ?>";
+    </script>
+</head>
+
+<body>
     <!-------------------------------------------------------------------------------------->
     <!----------------------------------------HEADER---------------------------------------->
     <!-------------------------------------------------------------------------------------->
 
     <header id="header">
         <div class="container">
-            <a href="#" class="logo">
-                <img src="weprime2.png" alt="WePrimeWeb Logo" class="logo-image">
+            <a href="#home" class="logo">
+                <img src="assets/media/weprime2.png" alt="WePrimeWeb Logo" class="logo-image">
             </a>
             <div class="menu-btn" id="menuBtn">
                 <div class="menu-btn__lines">
@@ -29,7 +51,7 @@
         <nav class="nav-menu" id="navMenu">
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#about-section">Sobre</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#sites-exclusivos">Sites</a></li>
                 <li><a href="#processo2">Processo</a></li>
@@ -43,22 +65,29 @@
 
 
 
-    <a href="https://wa.me/5519971370905" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
+    <!-- Popup que sera renderizado ao enviar o formulario de contato -->
+    <div id="popup" class="popup">
+        <div id="progressBar" class="progress-bar"></div>
+        <p></p>
+    </div>
+
+
+    <a href="<?= Utils::createLinkWhatsapp(CONTATO_WHATSAPP); ?>" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
         <div class="whatsapp-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
           </svg>
         </div>
-      </a>
+    </a>
 
-    
+
     <!-------------------------------------------------------------------------------------->
     <!----------------------------------------BANNER---------------------------------------->
     <!-------------------------------------------------------------------------------------->
 
     <section id="home">
         <video autoplay loop muted>
-            <source src="./espaco.mp4" type="video/mp4">
+            <source src="assets/media/espaco.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
             <div class="text-container">
@@ -76,17 +105,18 @@
             <a href="#sobre"><i class="fas fa-chevron-down"></i></a>
         </div>
         <div class="vertical-social-links">
-            <a href="https://www.instagram.com/weprime.web?igsh=NHI2eTliZm1uY2Nk" target="_blank" class="vertical-link instagram">Instagram</a>
-            <a href="https://wa.me/5519971370905" target="_blank" class="vertical-link whatsapp">WhatsApp</a>
+            <a href="<?= SOCIAL_INSTAGRAM; ?>" target="_blank" class="vertical-link instagram">Instagram</a>
+            <a href="<?= Utils::createLinkWhatsapp(CONTATO_WHATSAPP); ?>" target="_blank" class="vertical-link whatsapp">WhatsApp</a>
         </div>
     </section>
 
     <section id="infinite-banner">
         <div class="banner-container">
-            <img src="./placa3.png" alt="Banner publicitário" class="banner-image">
-            <img src="./placa3.png" alt="Banner publicitário" class="banner-image">
+            <img src="assets/media/placa3.png" alt="Banner publicitário" class="banner-image">
+            <img src="assets/media/placa3.png" alt="Banner publicitário" class="banner-image">
         </div>
     </section>
+
 
 
     <!----------------------------------------------------------------------------------------->
@@ -99,7 +129,7 @@
                 <div class="title-wrapper">
                     <span class="heading-start">SOBRE</span>
                     <div class="center-image">
-                        <img src="./weredondo.png" alt="About Us Image">
+                        <img src="assets/media/weredondo.png" alt="About Us Image">
                     </div>
                     <span class="heading-end">NÓS</span>
                 </div>
@@ -130,14 +160,13 @@
                     </div>
                 </div>
     
-                <a href="https://wa.me/5519971370905" target="_blank"><button class="cta-button">SAIBA MAIS</button></a>
+                <a href="<?= Utils::createLinkWhatsapp(CONTATO_WHATSAPP); ?>" target="_blank"><button class="cta-button">SAIBA MAIS</button></a>
                 
                 <div class="social-links">
-                    
-                    <a href="#" class="social-icon">
+                    <a href="<?= SOCIAL_FACEBOOK; ?>" class="social-icon">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="https://www.instagram.com/weprime.web?igsh=NHI2eTliZm1uY2Nk" target="_blank" class="social-icon">
+                    <a href="<?= SOCIAL_INSTAGRAM; ?>" target="_blank" class="social-icon">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
@@ -193,7 +222,7 @@
             <p class="description">Nossos sites exclusivos são criados sob medida para atender às necessidades específicas do seu negócio. Com designs inovadores e funcionalidades avançadas, garantimos uma presença online que se destaca e converte.</p>
         </div>
         <div class="image-wrapper">
-            <img src="./celular.png" alt="Preview de Site Exclusivo" class="preview-image" id="animated-image">
+            <img src="assets/media/celular.png" alt="Preview de Site Exclusivo" class="preview-image" id="animated-image">
         </div>
         <div class="decorative-element element-1"></div>
         <div class="decorative-element element-2"></div>
@@ -220,7 +249,7 @@
                     <p>Modelos profissionais e únicos</p>
                     <p>para sua presença online</p>
                 </div>
-                <a href="https://wa.me/5519971370905" target="_blank">
+                <a href="<?= Utils::createLinkWhatsapp(CONTATO_WHATSAPP, "Olá, gostei dos sites e gostaria de saber mais a respeito sobre os modelos."); ?>" target="_blank">
                 <button class="explore-button">
                     <span>Escolher Modelo</span>
                     <div class="button-glow"></div>
@@ -230,7 +259,7 @@
             
             <div class="content-right">
                 <div class="main-preview">
-                    <img src="./site1.PNG" alt="Website Preview" class="main-image">
+                    <img src="assets/media/site1.PNG" alt="Website Preview" class="main-image">
                     <div class="preview-info">
                         <h2>Site Médico</h2>
                         <p>Design moderno e profissional</p>
@@ -239,19 +268,19 @@
                 
                 <div class="preview-grid">
                     <div class="preview-item">
-                        <img src="./site1.PNG" alt="Site Médico">
+                        <img src="assets/media/site1.PNG" alt="Site Médico">
                         <div class="preview-overlay">Médico</div>
                     </div>
                     <div class="preview-item">
-                        <img src="./site1.PNG" alt="Site Jurídico">
+                        <img src="assets/media/site1.PNG" alt="Site Jurídico">
                         <div class="preview-overlay">Jurídico</div>
                     </div>
                     <div class="preview-item">
-                        <img src="./site1.PNG" alt="Site Odontológico">
+                        <img src="assets/media/site1.PNG" alt="Site Odontológico">
                         <div class="preview-overlay">Odontológico</div>
                     </div>
                     <div class="preview-item">
-                        <img src="./site1.PNG" alt="Site Psicologia">
+                        <img src="assets/media/site1.PNG" alt="Site Psicologia">
                         <div class="preview-overlay">Psicologia</div>
                     </div>
                 </div>
@@ -357,7 +386,7 @@
                 <div class="team-member">
                     <div class="member-image">
                         <div class="front">
-                            <img src="./fernandinho.jpg" alt="Fernando">
+                            <img src="assets/media/fernandinho.jpg" alt="Fernando">
                         </div>
                         <div class="back">
                             <i class="fas fa-code"></i>
@@ -369,7 +398,7 @@
                 <div class="team-member">
                     <div class="member-image">
                         <div class="front">
-                            <img src="./pedro.jpg" alt="Pedro">
+                            <img src="assets/media/pedro.jpg" alt="Pedro">
                         </div>
                         <div class="back">
                             <i class="fas fa-code"></i>
@@ -381,7 +410,7 @@
                 <div class="team-member">
                     <div class="member-image">
                         <div class="front">
-                            <img src="./peruza.jpg" alt="Matheus">
+                            <img src="assets/media/peruza.jpg" alt="Matheus">
                         </div>
                         <div class="back">
                             <i class="fas fa-bullhorn"></i>
@@ -413,7 +442,7 @@
                         <li><i class="fas fa-check"></i> Integração com WhatsApp e redes sociais</li>
                         <li><i class="fas fa-check"></i> Suporte básico</li>
                     </ul>
-                    <a href="https://wa.me/5519971370905" target="_blank" class="btn">Escolher Plano</a>
+                    <a href="<?= Utils::createLinkWhatsapp(CONTATO_WHATSAPP, "Olá, gostaria de saber mais sobre o plano Optimus."); ?>" target="_blank" class="btn">Escolher Plano</a>
                 </div>
                 <div class="pricing-card">
                     <h3>Prime</h3>
@@ -425,7 +454,7 @@
                         <li><i class="fas fa-check"></i> Manutenção e atualizações mensais</li>
                         <li><i class="fas fa-check"></i> Inclui tudo do Plano Essencial</li>
                     </ul>
-                    <a href="https://wa.me/5519971370905" target="_blank" class="btn">Escolher Plano</a>
+                    <a href="<?= Utils::createLinkWhatsapp(CONTATO_WHATSAPP, "Olá, gostaria de saber mais sobre o plano Prime."); ?>" target="_blank" class="btn">Escolher Plano</a>
                 </div>
             </div>
         </div>
@@ -441,21 +470,21 @@
             <div class="contact-content">
                 <div class="contact-form">
                     <h3>Envie uma mensagem</h3>
-                    <form>
+                    <form id="formContato">
                         <div class="input-group">
-                            <input type="text" placeholder="Nome" required>
+                            <input type="text" id="frm_nome" name="frm_nome" placeholder="Nome" required>
                             <i class="fas fa-user"></i>
                         </div>
                         <div class="input-group">
-                            <input type="email" placeholder="Email" required>
+                            <input type="email" id="frm_email" name="frm_email" placeholder="Email" required>
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="input-group">
-                            <input type="tel" placeholder="Telefone" required>
+                            <input type="tel" id="frm_telefone" name="frm_telefone" placeholder="Telefone" required>
                             <i class="fas fa-phone"></i>
                         </div>
                         <div class="input-group">
-                            <textarea placeholder="Mensagem" required></textarea>
+                            <textarea placeholder="Mensagem" id="frm_mensagem" name="frm_mensagem" required></textarea>
                             <i class="fas fa-comment-alt"></i>
                         </div>
                         <button type="submit" class="btn">
@@ -472,7 +501,7 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p>contato@primeweb.com.br</p>
+                            <p><?= CONTATO_EMAIL; ?></p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -481,7 +510,7 @@
                         </div>
                         <div>
                             <h4>Telefone</h4>
-                            <p>(19) 97137-0905</p>
+                            <p><?= CONTATO_TELEFONE; ?></p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -494,10 +523,10 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/weprime.web?igsh=NHI2eTliZm1uY2Nk" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="<?= SOCIAL_FACEBOOK; ?>" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="<?= SOCIAL_TWITTER_X; ?>" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="<?= SOCIAL_INSTAGRAM; ?>" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="<?= SOCIAL_LINKEDIN; ?>" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
@@ -519,16 +548,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section logo-section">
-                    <img src="./weprime2.png" alt="WePrimeWeb Logo" class="footer-logo">
+                    <img src="assets/media/weprime2.png" alt="WePrimeWeb Logo" class="footer-logo">
                     <p>Transformando ideias em <br>experiências digitais<br> excepcionais.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Links Rápidos</h4>
                     <ul>
                         <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="#sobre"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                        <li><a href="#about-section"><i class="fas fa-info-circle"></i> Sobre</a></li>
                         <li><a href="#servicos"><i class="fas fa-cogs"></i> Serviços</a></li>
-                        <li><a href="#exclusive-sites"><i class="fas fa-laptop"></i> Sites</a></li>
+                        <li><a href="#sites-exclusivos"><i class="fas fa-laptop"></i> Sites</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -542,8 +571,8 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contato</h4>
-                    <p><i class="fas fa-envelope"></i> contato@weprimeweb.com.br</p>
-                    <p><i class="fas fa-phone-alt"></i>+55 (19) 97137-0905</p>
+                    <p><i class="fas fa-envelope"></i> <?= CONTATO_EMAIL; ?></p>
+                    <p><i class="fas fa-phone-alt"></i>+55 <?= CONTATO_TELEFONE; ?></p>
                     <div class="social-links">
                         <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
@@ -553,7 +582,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 WePrimeWeb Developers. Todos os direitos reservados.</p>
+                <p>&copy; <?= date("Y"); ?> WePrimeWeb Developers. Todos os direitos reservados.</p>
             </div>
         </div>
         <div class="animated-bg">
@@ -565,6 +594,6 @@
     
     
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

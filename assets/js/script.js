@@ -1,3 +1,75 @@
+// Popup modal para formulário de contato
+let progessInterval;
+
+function exibirPopup(classe, mensagem) {
+    const popup       = document.querySelector("#popup");
+    const progressBar = document.querySelector("#progressBar");
+
+    popup.classList.add(classe);
+    popup.querySelector("p").textContent = mensagem;
+
+    popup.style.display = "block";
+    setTimeout(() => {
+        popup.style.opacity = "1";
+    }, 10);
+
+    let duracao   = 12000;
+    let intervalo = 100;
+    let inc       = (intervalo / duracao) * 100;
+    let progress  = 0;
+
+    progressBar.style.width = "0";
+
+    progessInterval = setInterval(() => {
+        progress += inc;
+        progressBar.style.width = `${progress}%`;
+
+        if(progress >= 100) {
+            fecharPopup();
+        }
+    }, intervalo);
+}
+
+function fecharPopup() {
+    clearInterval(progessInterval);
+
+    const popup = document.querySelector("#popup");
+    popup.style.opacity = "0";
+    setTimeout(() => {
+        popup.style.display = "0";
+    }, 500);
+}
+
+document.getElementById("popup").addEventListener("click", fecharPopup);
+
+
+// Formulário de contato 
+function processaFormulario(e) {
+    e.preventDefault();
+
+    const form = document.querySelector("#formContato");
+    const formData = new FormData(form);
+
+    fetch(`${baseUrl}/app/Api/PostContato.php`, {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        exibirPopup(data.classe, data.mensagem);
+
+        if(data.classe === "popup-success") 
+            form.reset();
+    })
+    .catch(error => console.error(error));
+}
+
+document.querySelector("#formContato").addEventListener("submit", (e) => processaFormulario(e));
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const menuBtn = document.getElementById('menuBtn');
     const navMenu = document.getElementById('navMenu');
