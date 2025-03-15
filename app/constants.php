@@ -22,7 +22,7 @@ define('MAIL_HOST', 'smtp.hostinger.com'); //Servidor de e-mail
 define('MAIL_PORT', '465'); //Porta de envio
 define('MAIL_USER', 'contato@weprimeweb.com'); //E-mail de envio
 define('MAIL_SMTP', 'contato@weprimeweb.com'); //E-mail autenticador do envio (Geralmente igual ao MAIL_USER, exceto em serviços como AmazonSES, sendgrid...)
-define('MAIL_PASS', '4dSsvOZ&pK'); //Senha do e-mail de envio
+define('MAIL_PASS', '**********'); //Senha do e-mail de envio
 define('MAIL_MODE', 'ssl'); //Encriptação para envio de e-mail [0 não parametrizar / tls / ssl] (Padrão = tls)
 define('MAIL_SENDER', 'WEPRIME WEB '); //Nome do remetente de e-mail
 
