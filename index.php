@@ -386,7 +386,7 @@
                 <div class="team-member">
                     <div class="member-image">
                         <div class="front">
-                            <img src="assets/media/fernandinho.jpg" alt="Fernando">
+                            <img src="assets/media/fernandinho1.jpg" alt="Fernando">
                         </div>
                         <div class="back">
                             <i class="fas fa-code"></i>
@@ -398,7 +398,7 @@
                 <div class="team-member">
                     <div class="member-image">
                         <div class="front">
-                            <img src="assets/media/pedro.jpg" alt="Pedro">
+                            <img src="assets/media/pedro1.jpg" alt="Pedro">
                         </div>
                         <div class="back">
                             <i class="fas fa-code"></i>
@@ -410,7 +410,7 @@
                 <div class="team-member">
                     <div class="member-image">
                         <div class="front">
-                            <img src="assets/media/peruza.jpg" alt="Matheus">
+                            <img src="assets/media/peruzza1.jpg" alt="Matheus">
                         </div>
                         <div class="back">
                             <i class="fas fa-bullhorn"></i>
