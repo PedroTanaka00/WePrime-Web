@@ -272,15 +272,15 @@
                         <div class="preview-overlay">Médico</div>
                     </div>
                     <div class="preview-item">
-                        <img src="assets/media/site1.PNG" alt="Site Jurídico">
+                        <img src="assets/media/site2.PNG" alt="Site Jurídico">
                         <div class="preview-overlay">Jurídico</div>
                     </div>
                     <div class="preview-item">
-                        <img src="assets/media/site1.PNG" alt="Site Odontológico">
+                        <img src="assets/media/dentista.jpg" alt="Site Odontológico">
                         <div class="preview-overlay">Odontológico</div>
                     </div>
                     <div class="preview-item">
-                        <img src="assets/media/site1.PNG" alt="Site Psicologia">
+                        <img src="assets/media/psicologo.jpg" alt="Site Psicologia">
                         <div class="preview-overlay">Psicologia</div>
                     </div>
                 </div>
@@ -434,7 +434,7 @@
                 
                 <div class="pricing-card featured">
                     <h3>Optimus</h3>
-                    <p class="price">R$ 79/mês</p>
+                    <p class="price">R$ 49/mês</p>
                     <ul>
                         <li><i class="fas fa-check"></i> Criação de site One-Page ou Institucional (até 3 páginas)</li>
                         <li><i class="fas fa-check"></i> Hospedagem incluída</li>
@@ -446,7 +446,7 @@
                 </div>
                 <div class="pricing-card">
                     <h3>Prime</h3>
-                    <p class="price">R$ 149/mês</p>
+                    <p class="price">R$ 79/mês</p>
                     <ul>
                         <li><i class="fas fa-check"></i> Criação de site até 5 páginas (com estrutura mais robusta e otimizada)</li>
                         <li><i class="fas fa-check"></i> SEO básico para melhorar o ranqueamento no Google</li>
