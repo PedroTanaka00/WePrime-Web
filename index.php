@@ -199,9 +199,9 @@
                 </div>
                
                 <div class="service-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Segurança e Conformidade</h3>
-                    <p>Implementação de medidas de segurança e conformidade com LGPD e outras regulamentações.</p>
+                <i class="fab fa-instagram"></i>
+                <h3>Posts para Instagram</h3>
+                <p>Criamos posts com design moderno e atraente para o Instagram, aumentando o engajamento e fortalecendo sua marca nas redes sociais.</p>
                 </div>
                 
             </div>
@@ -276,7 +276,7 @@
                         <div class="preview-overlay">Jurídico</div>
                     </div>
                     <div class="preview-item">
-                        <img src="assets/media/dentista.jpg" alt="Site Odontológico">
+                        <img src="assets/media/site3.PNG" alt="Site Odontológico">
                         <div class="preview-overlay">Odontológico</div>
                     </div>
                     <div class="preview-item">
@@ -294,7 +294,29 @@
     <!----------------------------------------SITES INDIVIDUAIS---------------------------------------->
     <!------------------------------------------------------------------------------------------------->
 
+
     <section id="hero-arcane">
+        <!-- Elementos decorativos animados -->
+        <div class="particles-container"></div>
+        <div class="floating-icons">
+            <!-- Ícones originais -->
+            <div class="floating-icon icon-1"><i class="fas fa-code"></i></div>
+            <div class="floating-icon icon-2"><i class="fas fa-paint-brush"></i></div>
+            <div class="floating-icon icon-3"><i class="fas fa-rocket"></i></div>
+            <div class="floating-icon icon-4"><i class="fas fa-laptop-code"></i></div>
+            
+            <!-- Novos ícones de desenvolvimento e design -->
+            <div class="floating-icon icon-5"><i class="fas fa-layer-group"></i></div>
+            <div class="floating-icon icon-6"><i class="fas fa-bezier-curve"></i></div>
+            <div class="floating-icon icon-7"><i class="fas fa-mobile-alt"></i></div>
+            <div class="floating-icon icon-8"><i class="fas fa-palette"></i></div>
+            <div class="floating-icon icon-9"><i class="fas fa-sitemap"></i></div>
+            <div class="floating-icon icon-10"><i class="fas fa-pencil-ruler"></i></div>
+            <div class="floating-icon icon-11"><i class="fas fa-database"></i></div>
+            <div class="floating-icon icon-12"><i class="fas fa-vector-square"></i></div>
+        </div>
+       
+    
         <nav class="top-nav">
             <div class="logo">SITES</div>
             <div class="nav-right"></div>
@@ -302,14 +324,22 @@
     
         <div class="content-wrapper">
             <div class="left-content">
-                <div class="subtitle">SITE SÓ SEU!</div>
-                <h1 class="main-title">SÓ SEU!!</h1>
+                <div class="subtitle">SITE SÓ SEU! <span class="highlight-dot"></span></div>
+                <h1 class="main-title">SÓ SEU!!
+                    <span class="title-highlight"></span>
+                </h1>
                 <div class="quote-box">
-                    <span class="quote">"Transforme sua visão em uma <br> presença online extraordinária"</span>
-                    <span class="quote-info">Desenvolvemos sites totalmente individualizados, alinhando a visão do cliente com nossas soluções. <br> Usamos suas explicações, referências de outros sites e arquivos PSD fornecidos para criar projetos únicos, <br> sob medida, que refletem sua identidade com autenticidade e profissionalismo.</span>
+                    <span class="quote">Transforme sua visão em uma <br> presença online extraordinária</span>
+                    <span class="quote-info">Desenvolvemos sites totalmente individualizados, alinhando a visão do cliente com nossas soluções. <br class="desktop-break"> Usamos suas explicações, referências de outros sites e arquivos PSD fornecidos para criar projetos únicos, <br class="desktop-break"> sob medida, que refletem sua identidade com autenticidade e profissionalismo.</span>
                 </div>
-                <a href="form-personalizado/form.html" target="_blank" class="cta-button">
-                <button class="discover-btn">Crie seu Site!</button> </a>
+                <div class="button-container">
+                    <a href="form-personalizado/form.html" target="_blank" class="cta-button">
+                        <button class="discover-btn">
+                            <span class="btn-text">Crie seu Site!</span>
+                            <div class="btn-shine"></div>
+                        </button>
+                    </a>
+                </div>
             </div>   
         </div>
     
@@ -321,6 +351,77 @@
             <div class="page-number">01</div>
         </div>
     </section>
+    
+    <!-- Adicionar FontAwesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+<!---------------------------------------------------------------------------------------->
+<!----------------------------------------INSTAGRAM---------------------------------------->
+<!---------------------------------------------------------------------------------------->
+
+    <!-- Primeira seção - Hero -->
+    <section id="instagram-hero">
+        <div class="glow-effect glow-1"></div>
+        <div class="glow-effect glow-2"></div>
+        <div class="glow-effect glow-3"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Domine o <span class="instagram-text">Instagram</span> com Posts Profissionais</h1>
+                <p>Atraia, engaje e converta com conteúdos estratégicos e visuais impactantes que fortalecem sua marca e aumentam seu alcance.</p>
+                <div class="cta-buttons">
+                    <a href="#contato"><button class="btn-secondary">Contato</button></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-glow"></div>
+                <div class="image-container">
+                    <img src="assets/media/insta2.png" alt="Mulher profissional" class="animated-image">
+                    <div class="modern-line line-top"></div>
+                    <div class="modern-line line-right"></div>
+                    <div class="modern-line line-bottom"></div>
+                    <div class="modern-line line-left"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- Última seção - Quem te ensina -->
+    <section id="instagram-teacher">
+        <div class="glow-effect glow-1"></div>
+        <div class="glow-effect glow-2"></div>
+        <div class="glow-effect glow-3"></div>
+        
+        <div class="teacher-content">
+            <div class="phone-mockup">
+                <div class="image-glow"></div>
+                <div class="image-container">
+                    <img src="assets/media/insta.png" alt="Celular com Instagram" class="animated-image">
+                    <div class="modern-line line-top"></div>
+                    <div class="modern-line line-right"></div>
+                    <div class="modern-line line-bottom"></div>
+                    <div class="modern-line line-left"></div>
+                </div>
+            </div>
+            <div class="teacher-info">
+                <h2>Entenda como Funciona!</h2>
+                <p>Criamos posts incríveis que vão transformar seu Instagram em uma poderosa ferramenta de engajamento.</p>
+                <p>Com designs modernos e estratégias certeiras, ajudamos sua marca a crescer e atrair mais clientes.</p>
+                <p>Domine o <span class="instagram-text">Instagram</span> aumente seu alcance e converta seguidores em clientes. Vamos juntos fortalecer sua presença digital!</p>
+                
+                <a href="#contato"><button class="btn-primary">Quero aprender agora</button></a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
 
 
     <!---------------------------------------------------------------------------------------->
@@ -436,6 +537,7 @@
                     <h3>Optimus</h3>
                     <p class="price">R$ 49/mês</p>
                     <ul>
+                        <li><i class="fas fa-check"></i> Utilização do nosso Painel do site</li>
                         <li><i class="fas fa-check"></i> Criação de site One-Page ou Institucional (até 3 páginas)</li>
                         <li><i class="fas fa-check"></i> Hospedagem incluída</li>
                         <li><i class="fas fa-check"></i> Otimização para celular e tablet (design responsivo)</li>
@@ -448,7 +550,8 @@
                     <h3>Prime</h3>
                     <p class="price">R$ 79/mês</p>
                     <ul>
-                        <li><i class="fas fa-check"></i> Criação de site até 5 páginas (com estrutura mais robusta e otimizada)</li>
+                        <li><i class="fas fa-check"></i> Utilização do nosso Painel do site</li>
+                        <li><i class="fas fa-check"></i> Criação de site até 7 páginas (com estrutura mais robusta e otimizada)</li>
                         <li><i class="fas fa-check"></i> SEO básico para melhorar o ranqueamento no Google</li>
                         <li><i class="fas fa-check"></i> E-mail profissional</li>
                         <li><i class="fas fa-check"></i> Manutenção e atualizações mensais</li>

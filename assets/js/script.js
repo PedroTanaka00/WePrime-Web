@@ -611,3 +611,225 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.setProperty('--y', `${y}px`);
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Selecionar todas as imagens animadas
+    const animatedImages = document.querySelectorAll('.animated-image');
+    
+    // Função para iniciar o ciclo de rotação
+    function startRotationCycle() {
+        animatedImages.forEach((img, index) => {
+            // Iniciar o primeiro ciclo após um pequeno atraso para cada imagem
+            setTimeout(() => {
+                rotateImage(img, index);
+            }, index * 1000); // Começar com um pequeno atraso entre imagens
+        });
+    }
+    
+    // Função para rotacionar uma imagem e programar a próxima rotação
+    function rotateImage(img, index) {
+        // Determinar a posição atual da flutuação para manter durante a rotação
+        const computedStyle = window.getComputedStyle(img);
+        const transform = computedStyle.getPropertyValue('transform');
+        
+        // Extrair o valor de translateY da matriz de transformação
+        let translateY = 0;
+        if (transform !== 'none') {
+            const matrix = transform.match(/matrix.*$$(.+)$$/)[1].split(', ');
+            translateY = parseFloat(matrix[5]);
+        }
+        
+        // Normalizar o valor de translateY para um valor entre 0 e 1
+        const maxTranslate = 15; // Valor máximo da animação float
+        const floatPosition = 0.5 - (translateY / (2 * maxTranslate));
+        
+        // Definir a posição de flutuação como uma variável CSS personalizada
+        img.style.setProperty('--float-position', floatPosition);
+        
+        // Adicionar e remover a classe de rotação
+        img.classList.add('rotate360');
+        
+        // Remover a classe após a animação terminar para permitir que a animação de flutuação continue
+        setTimeout(() => {
+            img.classList.remove('rotate360');
+            
+            // Agendar a próxima rotação após 5 segundos
+            setTimeout(() => {
+                rotateImage(img, index);
+            }, 5000);
+            
+        }, 2000); // A duração da animação de rotação
+    }
+    
+    // Iniciar o ciclo de rotação
+    startRotationCycle();
+    
+    // Adicionar animação para os pontos na seção X
+    function animateXSectionDots() {
+        const dotsContainers = document.querySelectorAll('.dots-container');
+        
+        // Criar pontos adicionais dinamicamente
+        dotsContainers.forEach((container, index) => {
+            // Adicionar mais pontos aleatórios
+            for (let i = 0; i < 20; i++) { // Aumentado para 20 pontos
+                const dot = document.createElement('div');
+                dot.className = 'extra-dot';
+                // Distribuir os pontos ao longo de toda a largura
+                dot.style.left = `${Math.random() * 200}%`; // Aumentado para 200%
+                dot.style.top = `${Math.random() * 10 - 5}px`;
+                dot.style.width = `${2 + Math.random() * 3}px`;
+                dot.style.height = `${2 + Math.random() * 3}px`;
+                dot.style.position = 'absolute';
+                dot.style.borderRadius = '50%';
+                dot.style.backgroundColor = 'white';
+                dot.style.boxShadow = '0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5)';
+                dot.style.opacity = `${0.3 + Math.random() * 0.7}`;
+                
+                container.appendChild(dot);
+            }
+        });
+    }
+    
+    // Chamar a função para animar os pontos
+    animateXSectionDots();
+    
+    // Ajustar as linhas modernas quando a janela for redimensionada
+    function adjustModernLines() {
+        const imageContainers = document.querySelectorAll('.image-container');
+        
+        imageContainers.forEach(container => {
+            const rect = container.getBoundingClientRect();
+            const lines = container.querySelectorAll('.modern-line');
+            
+            // Ajustar o comprimento máximo das linhas com base no tamanho da imagem
+            document.documentElement.style.setProperty('--max-line-width', `${rect.width * 0.8}px`);
+            document.documentElement.style.setProperty('--max-line-height', `${rect.height * 0.8}px`);
+        });
+    }
+    
+    // Chamar a função de ajuste inicialmente e quando a janela for redimensionada
+    adjustModernLines();
+    window.addEventListener('resize', adjustModernLines);
+    
+    // Adicionar interatividade às linhas quando o mouse passa sobre a imagem
+    const imageContainers = document.querySelectorAll('.image-container');
+    
+    imageContainers.forEach(container => {
+        container.addEventListener('mouseenter', () => {
+            const lines = container.querySelectorAll('.modern-line');
+            lines.forEach(line => {
+                line.style.opacity = '1';
+                line.style.boxShadow = '0 0 15px rgba(0, 247, 255, 1), 0 0 30px rgba(234, 0, 255, 0.8)';
+            });
+        });
+        
+        container.addEventListener('mouseleave', () => {
+            const lines = container.querySelectorAll('.modern-line');
+            lines.forEach(line => {
+                line.style.opacity = '0.8';
+                line.style.boxShadow = '0 0 10px rgba(0, 247, 255, 0.8), 0 0 20px rgba(234, 0, 255, 0.5)';
+            });
+        });
+    });
+});
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Criar partículas (reduzidas)
+    createParticles();
+    
+    // Adicionar efeito de hover ao botão
+    setupButtonHover();
+});
+
+// Função para criar partículas (reduzidas)
+function createParticles() {
+    const particlesContainer = document.querySelector('.particles-container');
+    const particleCount = 20; // Reduzido de 50 para 20
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Estilizar partícula
+        particle.style.position = 'absolute';
+        particle.style.width = `${2 + Math.random() * 3}px`;
+        particle.style.height = particle.style.width;
+        particle.style.backgroundColor = Math.random() > 0.5 ? 'rgba(0, 255, 242, 0.3)' : 'rgba(255, 0, 255, 0.3)';
+        particle.style.borderRadius = '50%';
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.filter = 'blur(1px)';
+        particle.style.boxShadow = '0 0 10px currentColor';
+        
+        // Animar partícula
+        const duration = 10 + Math.random() * 20;
+        const delay = Math.random() * 10;
+        
+        particle.style.animation = `floatParticle ${duration}s ease-in-out ${delay}s infinite`;
+        
+        // Adicionar keyframes para a animação
+        if (!document.querySelector('#particle-keyframes')) {
+            const style = document.createElement('style');
+            style.id = 'particle-keyframes';
+            style.textContent = `
+                @keyframes floatParticle {
+                    0%, 100% {
+                        transform: translate(0, 0);
+                        opacity: 0;
+                    }
+                    25% {
+                        opacity: 1;
+                    }
+                    50% {
+                        transform: translate(${Math.random() > 0.5 ? '' : '-'}${20 + Math.random() * 30}px, ${Math.random() > 0.5 ? '' : '-'}${20 + Math.random() * 30}px);
+                        opacity: 1;
+                    }
+                    75% {
+                        opacity: 1;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        particlesContainer.appendChild(particle);
+    }
+}
+
+// Função para configurar o efeito de hover no botão
+function setupButtonHover() {
+    const button = document.querySelector('.discover-btn');
+    
+    button.addEventListener('mouseenter', function() {
+        // Adicionar classe para efeito de hover
+        this.classList.add('btn-hover');
+        
+        // Garantir que o texto fique por cima do efeito de cor
+        const btnText = this.querySelector('.btn-text');
+        if (btnText) {
+            btnText.style.zIndex = '5';
+            btnText.style.position = 'relative';
+        }
+    });
+    
+    button.addEventListener('mouseleave', function() {
+        // Remover classe de hover
+        this.classList.remove('btn-hover');
+    });
+}
